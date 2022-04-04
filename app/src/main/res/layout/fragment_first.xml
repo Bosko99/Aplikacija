@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="20dp"
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/viewUnderlineButtonLeft"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/ButtonDropDown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ButtonDropDown" />
+
+
+        <View
+            android:id="@+id/viewUnderlineButtonLeft"
+            android:layout_width="190dp"
+            android:layout_height="2dp"
+            android:background="@color/purple_700"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ButtonProfil"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonProfil" />
+
+        <View
+            android:id="@+id/viewUnderlineButtonRight"
+            android:layout_width="190dp"
+            android:layout_height="2dp"
+            android:background="@color/gray_lite"
+            app:layout_constraintEnd_toEndOf="@+id/ButtonSavjeti"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonSavjeti" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ButtonProfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/empty"
+            android:gravity="left|center"
+            android:text="@string/profil"
+            android:textAllCaps="false"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonDropDown" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ButtonSavjeti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/empty"
+            android:gravity="right|center"
+            android:text="@string/savjeti"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_dark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonDropDown" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ButtonDropDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/empty"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_dark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Text ﹀" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recucleView"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewUnderlineButtonRight"
+            tools:listitem="@layout/item_specialist" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ButtonAdd"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:elevation="6dp"
+            android:text="+"
+            android:textColor="@color/gray"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recucleView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/lorem_ip"
+            android:textColor="@color/purple_700"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ButtonDropDown"
+            app:layout_constraintStart_toEndOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/ButtonDropDown" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/dodaj_clana_porodice"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ButtonAdd"
+            app:layout_constraintStart_toEndOf="@+id/ButtonAdd"
+            app:layout_constraintTop_toTopOf="@+id/ButtonAdd" />
+
+        <View
+            android:id="@+id/viewBackground"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/view_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonAdd"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="-64dp" />
+
+        <TextView
+            android:id="@+id/textViewLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:text="@string/crnogorski"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageButtonDeleteAccount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/buttonLanguage" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="5dp"
+            android:text="@string/izbrisi_profil"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonDeleteAccount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonDeleteAccount" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:text="@string/odjavi_se"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonLogout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonDeleteAccount" />
+
+        <ImageButton
+            android:id="@+id/imageButtonDeleteAccount"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bin"
+            app:layout_constraintEnd_toEndOf="@+id/viewBackground"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLanguage"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButtonLogout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logout_xxl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonDeleteAccount"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLanguage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@color/empty"
+            android:text="@string/item"
+            android:textColor="@color/my_purple"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewBackground" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
